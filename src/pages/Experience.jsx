@@ -1,42 +1,33 @@
 import { motion } from "framer-motion";
 
+import amazonLogo from "../assets/logos/amazon.jpg";
+import codsoftLogo from "../assets/logos/codsoft.jpg";
+
 const INTERNSHIPS = [
   {
-    company: "NoviTech R&D Pvt Ltd",
-    role: "AI & ML Intern (Online)",
-    duration: "Jul 2025 – Aug 2025 (1 Month)",
-    description: "Completed hands-on AI & ML internship. Worked on data preprocessing, feature engineering, and model training using Python and Scikit-learn. Applied supervised learning algorithms including classification and regression models. Gained exposure to real-world AI/ML workflows and industry best practices."
+    company: "Amazon",
+    role: "Software Developer Intern",
+    duration: "May 11, 2026 – July 3, 2026",
+    logo: amazonLogo,
+    description: [
+      "Worked on software development tasks and collaborated with cross-functional teams.",
+      "Contributed to building and optimizing scalable web services.",
+      "Gained hands-on experience with real-world enterprise architectures."
+    ]
   },
   {
-    company: "Pinnacle Labs",
-    role: "Data Science Intern (Virtual)",
-    duration: "Jul 11, 2025 – Aug 10, 2025 (4 Weeks)",
-    description: "Completed 4-week virtual internship in Data Science with commendable performance. Worked on data science tasks and projects, demonstrating exceptional dedication and skill. Credential ID: PL/2025/JULP5/217"
+    company: "CodSoft",
+    role: "Software Developer Intern",
+    duration: "2025",
+    logo: codsoftLogo,
+    description: [
+      "Completed hands-on projects and tasks in a fast-paced development environment.",
+      "Worked on full-stack development implementations.",
+      "Demonstrated strong problem-solving skills and technical proficiency."
+    ]
   }
 ];
 
-const HACKATHONS = [
-  {
-    name: "Thooral Hackathon",
-    organiser: "PSG College of Technology, Coimbatore",
-    event: "Infinitum 2026 — National-level Technical Symposium",
-    duration: "13th & 14th February 2026",
-    description: "Selected for the Final Round. Competed among top student teams to design and present an innovative tech solution under time constraints."
-  },
-  {
-    name: "Origin Hackathon",
-    organiser: "Saveetha Institute of Medical and Technical Sciences, Thandalam, Chennai",
-    duration: "Finalist",
-    description: "Selected for the Final Round. Collaborated with peers to ideate, prototype, and pitch a problem-solving product within the hackathon timeline."
-  },
-  {
-    name: "Lithos Hackathon",
-    organiser: "Chennai Institute of Technology, Malyambakkam, Chennai",
-    event: "Lithos 2K26",
-    duration: "Participant",
-    description: "Participated and demonstrated problem-solving skills by building and presenting a tech solution within a competitive hackathon environment."
-  }
-];
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -105,58 +96,30 @@ export default function Experience() {
                 <div className="absolute left-[-5px] top-2 w-[10px] h-[10px] bg-accent rounded-full border-4 border-background" />
                 
                 <span className="font-mono text-accent text-sm mb-2 block">{exp.duration}</span>
-                <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
-                <p className="text-accent font-medium mb-4">{exp.company}</p>
-                <p className="text-secondary-text max-w-2xl leading-relaxed">
-                  {exp.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Hackathons Section */}
-      <div className="mt-32">
-        <span className="font-mono text-accent text-xs tracking-widest uppercase mb-12 block">
-          // HACKATHONS
-        </span>
-        <div className="relative ml-4 py-4">
-          <motion.div 
-            variants={timelineLine}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="absolute left-0 top-0 bottom-0 w-px bg-accent/20 origin-top"
-          />
-
-          <div className="space-y-16">
-            {HACKATHONS.map((hack, i) => (
-              <motion.div
-                key={i}
-                variants={slideInLeft}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: i * 0.1 }}
-                className="relative pl-12"
-              >
-                <div className="absolute left-[-5px] top-2 w-[10px] h-[10px] bg-accent rounded-full border-4 border-background" />
                 
-                <span className="font-mono text-accent text-sm mb-2 block">{hack.duration}</span>
-                <h3 className="text-2xl font-bold text-white mb-1">{hack.name}</h3>
-                <p className="text-accent font-medium mb-1">{hack.organiser}</p>
-                {hack.event && (
-                  <p className="text-white/60 text-sm mb-4 font-mono uppercase tracking-widest">{hack.event}</p>
-                )}
-                <p className="text-secondary-text max-w-2xl leading-relaxed">
-                  {hack.description}
-                </p>
+                <div className="flex items-center gap-4 mb-4 mt-2">
+                  {exp.logo && (
+                    <img src={exp.logo} alt={`${exp.company} Logo`} className="w-12 h-12 object-contain rounded-md bg-white/5 p-1" />
+                  )}
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-1 leading-tight">{exp.role}</h3>
+                    <p className="text-accent font-medium">{exp.company}</p>
+                  </div>
+                </div>
+
+                <ul className="text-secondary-text max-w-2xl leading-relaxed list-disc list-outside ml-4 space-y-2">
+                  {Array.isArray(exp.description) ? exp.description.map((desc, idx) => (
+                    <li key={idx}>{desc}</li>
+                  )) : (
+                    <li>{exp.description}</li>
+                  )}
+                </ul>
               </motion.div>
             ))}
           </div>
         </div>
       </div>
+
     </motion.div>
   );
 }

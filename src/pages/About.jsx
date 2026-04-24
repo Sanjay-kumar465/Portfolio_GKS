@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import profileImg from "../assets/profile/profile.png";
 
 const skillCategories = [
   {
@@ -25,18 +26,19 @@ const skillCategories = [
 
 const timeline = [
   {
-    year: "2024 – 2028",
-    title: "B.E. Computer Science and Engineering",
-    institution: "Sri Krishna College of Engineering and Technology, Coimbatore",
-    description: "Currently Pursuing — 2nd Year | GPA: 8.22 (Till 3rd Sem)"
+    year: "2024 - 2028",
+    title: "B.Tech Information Technology",
+    institution: "",
+    description: "Grade : 8.25 (Till 3rd Semester)"
   },
   {
-    year: "2024 – PRESENT",
-    title: "Full Stack Development Focus",
-    institution: "Self-Directed Learning",
-    description: "Deep diving into modern web architectures, real-time systems, and architectural clean patterns."
+    year: "May 11 2026 - July 3 2026",
+    title: "Software Developer Intern",
+    institution: "Amazon",
+    description: "Software Developer Internship at Amazon."
   }
 ];
+
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -46,19 +48,19 @@ const pageVariants = {
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.6, ease: "easeOut" } 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
   }
 };
 
 const slideInLeft = {
   hidden: { opacity: 0, x: -40 },
-  visible: { 
-    opacity: 1, 
-    x: 0, 
-    transition: { duration: 0.6, ease: "easeOut" } 
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
   }
 };
 
@@ -79,7 +81,7 @@ export default function About() {
         <h2 className="section-title">About Me</h2>
 
         {/* Bio Block */}
-        <motion.div 
+        <motion.div
           variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
@@ -89,9 +91,9 @@ export default function About() {
           {/* Left: Photo */}
           <div className="group relative">
             <div className="aspect-square w-full max-w-[400px] border border-accent overflow-hidden transition-all duration-500 group-hover:shadow-[0_0_30px_rgba(250,204,21,0.2)]">
-              <img 
-                src="/profile.png" 
-                alt="Sanjay S" 
+              <img
+                src={profileImg}
+                alt="Gokula Kunguma Sri - Profile Photo"
                 className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
               />
             </div>
@@ -100,7 +102,7 @@ export default function About() {
           {/* Right: Text */}
           <div className="space-y-6">
             <p className="text-xl leading-relaxed text-secondary-text">
-              I'm <span className="text-white font-bold">Sanjay S</span>, a passionate Full Stack Developer based in Coimbatore, Tamil Nadu, India. I specialize in building intelligent, scalable web applications by integrating <span className="text-white font-medium">full stack development, AI/ML, and data science</span>.
+              I'm <span className="text-white font-bold">Gokula Kunguma Sri</span>, a passionate Software Developer based in Coimbatore, Tamilnadu - 641008. I specialize in building intelligent, scalable web applications by integrating <span className="text-white font-medium">full stack development, AI/ML, and data science</span>.
             </p>
             <p className="text-lg leading-relaxed text-secondary-text">
               My approach focuses on clean architecture, data-driven design, and high-performance user experiences. Whether it's developing real-time systems or solving complex data problems, I enjoy transforming challenges into efficient and impactful digital solutions.
@@ -114,11 +116,11 @@ export default function About() {
         <span className="font-mono text-accent text-sm tracking-[0.3em] uppercase mb-12 block">
           // SKILLS
         </span>
-        
+
         <div className="space-y-12">
           {skillCategories.map((category, catIndex) => (
-            <motion.div 
-              key={catIndex} 
+            <motion.div
+              key={catIndex}
               variants={fadeUpVariants}
               initial="hidden"
               whileInView="visible"
@@ -149,7 +151,7 @@ export default function About() {
         <span className="font-mono text-accent text-sm tracking-[0.3em] uppercase mb-12 block">
           // EXPERIENCE & EDUCATION
         </span>
-        
+
         <div className="relative border-l border-accent/30 ml-2 md:ml-4 pl-8 md:pl-12 space-y-16">
           {timeline.map((item, index) => (
             <motion.div
@@ -162,7 +164,7 @@ export default function About() {
             >
               {/* Dot on the line */}
               <div className="absolute left-[-41px] md:left-[-57px] top-2 w-[16px] h-[16px] bg-accent rounded-full border-4 border-background" />
-              
+
               <span className="font-mono text-accent text-sm mb-2 block">{item.year}</span>
               <h3 className="text-2xl font-bold mb-1">{item.title}</h3>
               {item.institution && (

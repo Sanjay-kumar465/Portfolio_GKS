@@ -5,47 +5,47 @@ import { ExternalLink, Code2 } from "lucide-react";
 const PROJECTS = [
   {
     id: "01",
-    name: "Real-time Collaborative Text Editor",
-    category: "Full Stack",
-    description: "A Google Docs-style real-time collaborative editor with conflict resolution.",
-    tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-    github: "https://github.com/Sanjay-kumar465/Real-time-Collaborative-Text-Editor",
+    name: "Spring Boot Pharmacy Inventory Management",
+    category: "Backend",
+    description: "A spring boot project that shows how the backend is working for a inventory management system.",
+    tech: ["Java", "Spring Boot", "Backend"],
+    github: "https://github.com/kunguma-sri06/SPRING_BOOT_PHARMACY_INVENTORY_MANAGEMNET",
     demo: "#"
   },
   {
     id: "02",
-    name: "Online Grocery Order Processing System",
-    category: "Full Stack",
-    description: "End-to-end grocery management system with inventory tracking and Java backend.",
-    tech: ["Java", "Spring Boot", "MySQL"],
-    github: "https://github.com/Sanjay-kumar465/ONLINE-GROCERY-ORDER-PROCESSING-SYSTEM",
+    name: "Java Games",
+    category: "Backend",
+    description: "A collection of interactive games developed in Java.",
+    tech: ["Java", "OOP", "Game Development"],
+    github: "https://github.com/kunguma-sri06/JAVA_GAMES",
     demo: "#"
   },
   {
     id: "03",
-    name: "ChatApp",
-    category: "Full Stack",
-    description: "Multi-room messaging application with user authentication and instant delivery.",
-    tech: ["React", "Node.js", "Socket.io"],
-    github: "https://github.com/Sanjay-kumar465/chatapp",
+    name: "CodeSoft Landing Page",
+    category: "Frontend",
+    description: "A responsive landing page design created as part of CodeSoft internship.",
+    tech: ["HTML", "CSS", "Frontend"],
+    github: "https://github.com/kunguma-sri06/CODESOFT_LANDINGPAGE",
     demo: "#"
   },
   {
     id: "04",
-    name: "TN-Restaurant_Hub",
+    name: "CodSoft",
     category: "Frontend",
-    description: "Restaurant discovery platform for Tamil Nadu with elegant UI and area-based search.",
-    tech: ["React", "Tailwind CSS"],
-    github: "https://github.com/Sanjay-kumar465/TN-Restaurant_Hub",
+    description: "Frontend web development internship projects.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/kunguma-sri06/CODSOFT",
     demo: "#"
   },
   {
     id: "05",
-    name: "FakeNewsDetection",
-    category: "Backend",
-    description: "Machine learning Pipeline for identifying misinformation using NLP algorithms.",
-    tech: ["Python", "ML", "NLP"],
-    github: "https://github.com/Sanjay-kumar465/FakeNewsDetection",
+    name: "Personal Portfolio",
+    category: "Frontend",
+    description: "A personal portfolio website showcasing skills and projects.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/kunguma-sri06/CODESOFT_personal_portfolio",
     demo: "#"
   }
 ];

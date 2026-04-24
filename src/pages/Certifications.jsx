@@ -1,48 +1,60 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import cert1 from "../assets/certificates/WhatsApp Image 2026-04-17 at 12.28.34 PM.jpeg";
+import cert2 from "../assets/certificates/WhatsApp Image 2026-04-17 at 12.29.32 PM.jpeg";
+import cert3 from "../assets/certificates/WhatsApp Image 2026-04-17 at 12.31.02 PM.jpeg";
+import cert4 from "../assets/certificates/WhatsApp Image 2026-04-17 at 12.31.26 PM.jpeg";
+import cert5 from "../assets/certificates/WhatsApp Image 2026-04-17 at 12.31.44 PM.jpeg";
+import cert6 from "../assets/certificates/WhatsApp Image 2026-04-17 at 12.32.29 PM.jpeg";
 
 const CERTIFICATES = [
   {
-    name: "Artificial Intelligence Internship",
-    issuer: "NoviTech R&D Pvt Ltd",
-    date: "Aug 2025",
-    id: "AIIN13265",
-    file: "ai.pdf"
-  },
-  {
-    name: "Machine Learning Internship",
-    issuer: "NoviTech R&D Pvt Ltd",
-    date: "Aug 2025",
-    id: "MLIN6828",
-    file: "ml.pdf"
-  },
-  {
-    name: "Data Analytics Masterclass",
-    issuer: "NoviTech R&D Pvt Ltd",
-    date: "Aug 2025",
-    id: "NT_B25DAE230",
-    file: "data_analytics.pdf"
-  },
-  {
-    name: "Data Science Internship",
-    issuer: "Pinnacle Labs",
-    date: "Aug 17, 2025",
-    id: "PL/2025/JULP5/217",
-    file: "pinnacle.pdf"
-  },
-  {
-    name: "Thooral Hackathon — Participation",
-    issuer: "PSG College of Technology (Infinitum 2026)",
-    date: "Feb 2026",
+    name: "CEFR B1 Level of the LearnEnglish Course",
+    issuer: "EnglishHelper™",
+    date: "August 21, 2025",
     id: "—",
-    file: "thooral.pdf"
+    file: cert1,
+    credential: ""
   },
   {
-    name: "Lithos 2K26 — Participation",
-    issuer: "Chennai Institute of Technology",
-    date: "Feb 2026",
+    name: "CEFR C1 Level of the LearnEnglish+ Course",
+    issuer: "EnglishHelper™",
+    date: "December 14, 2025",
     id: "—",
-    file: "cit.pdf"
+    file: cert2,
+    credential: ""
+  },
+  {
+    name: "Introducing Generative AI with AWS",
+    issuer: "Udacity / AWS Educate",
+    date: "June 26, 2025",
+    id: "—",
+    file: cert3,
+    credential: "https://www.udacity.com/certificate/e/2d32fcca-3e0d-11f0-b59d-63655d1a50e1"
+  },
+  {
+    name: "Problem Solving (Basic)",
+    issuer: "HackerRank",
+    date: "02 Jun, 2025",
+    id: "—",
+    file: cert4,
+    credential: ""
+  },
+  {
+    name: "C++ Data Structures in the STL",
+    issuer: "Coursera Project Network",
+    date: "Apr 18, 2025",
+    id: "—",
+    file: cert5,
+    credential: "https://coursera.org/verify/GLV0Q1205D37"
+  },
+  {
+    name: "FLY-Scholar program",
+    issuer: "CMI Competitiveness Mindset Institute",
+    date: "October 2025",
+    id: "466524154",
+    file: cert6,
+    credential: ""
   }
 ];
 
@@ -125,15 +137,27 @@ export default function Certifications() {
               </div>
             </div>
 
-            <a
-              href={`/certificates/${cert.file}`}
-              download={isIOS}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 w-full min-h-[48px] py-4 bg-accent text-background font-bold uppercase tracking-widest text-xs hover:scale-[1.02] transition-all text-center flex items-center justify-center"
-            >
-              {isIOS ? "Download Certificate" : "View Certificate"}
-            </a>
+            <div className="mt-8 flex gap-4 w-full">
+              <a
+                href={cert.file}
+                download={isIOS}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 min-h-[48px] py-4 bg-accent text-background font-bold uppercase tracking-widest text-xs hover:scale-[1.02] transition-all text-center flex items-center justify-center"
+              >
+                {isIOS ? "Download" : "View"}
+              </a>
+              {cert.credential && (
+                <a
+                  href={cert.credential}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 min-h-[48px] py-4 border border-accent text-accent font-bold uppercase tracking-widest text-xs hover:scale-[1.02] hover:bg-accent/10 transition-all text-center flex items-center justify-center"
+                >
+                  Verify
+                </a>
+              )}
+            </div>
           </motion.div>
         ))}
       </motion.div>

@@ -3,6 +3,7 @@ import { Hero3D } from "../components/Hero3D";
 import { useEffect, useState } from "react";
 import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
+import resumePdf from "../assets/resume/resume.pdf";
 
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
@@ -36,19 +37,19 @@ export default function Home() {
   const socialLinks = [
     {
       icon: FaGithub,
-      link: "https://github.com/Sanjay-kumar465",
+      link: "https://github.com/kunguma-sri06",
       hoverColor: "hover:text-[#ffffff]",
       glow: "hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
     },
     {
       icon: FaLinkedin,
-      link: "https://www.linkedin.com/in/sanjay-senthikumar/",
+      link: "https://www.linkedin.com/in/gokula-kunguma-sri-313643326/",
       hoverColor: "hover:text-[#0077B5]",
       glow: "hover:drop-shadow-[0_0_10px_rgba(0,119,181,0.8)]"
     },
     {
       icon: FaInstagram,
-      link: "https://www.instagram.com/sanjay__kumar465/",
+      link: "https://www.instagram.com/_kunguma__sri_/",
       hoverColor: "hover:text-[#E1306C]",
       glow: "hover:drop-shadow-[0_0_10px_rgba(225,48,108,0.8)]"
     }
@@ -75,8 +76,8 @@ export default function Home() {
             // Welcome to my space
           </span>
           <h1 className="hero-title mb-6 text-4xl md:text-6xl lg:text-8xl">
-            Sanjay <br />
-            <span className="text-secondary-text">Senthilkumar</span>
+            Gokula <br />
+            <span className="text-secondary-text">Kunguma Sri</span>
           </h1>
         </motion.div>
 
@@ -128,7 +129,7 @@ export default function Home() {
               </button>
             </Link>
 
-            <a href="/resume.pdf" download>
+            <a href={resumePdf} download="Gokula_Kunguma_Sri_Resume.pdf">
               <button className="px-8 py-4 border border-white/20 text-white font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all flex items-center gap-3 min-h-[48px]">
                 Resume <Download size={18} />
               </button>

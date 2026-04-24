@@ -57,19 +57,19 @@ export default function Contact() {
   const socialLinks = [
     {
       icon: FaGithub,
-      link: "https://github.com/Sanjay-kumar465",
+      link: "https://github.com/kunguma-sri06",
       hoverColor: "hover:text-[#ffffff]",
       glow: "hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
     },
     {
       icon: FaLinkedin,
-      link: "https://www.linkedin.com/in/sanjay-senthikumar/",
+      link: "https://www.linkedin.com/in/gokula-kunguma-sri-313643326/",
       hoverColor: "hover:text-[#0077B5]",
       glow: "hover:drop-shadow-[0_0_10px_rgba(0,119,181,0.8)]"
     },
     {
       icon: FaInstagram,
-      link: "https://www.instagram.com/sanjay__kumar465/",
+      link: "https://www.instagram.com/_kunguma__sri_/",
       hoverColor: "hover:text-[#E1306C]",
       glow: "hover:drop-shadow-[0_0_10px_rgba(225,48,108,0.8)]"
     }
@@ -104,26 +104,26 @@ export default function Contact() {
           <div className="space-y-6">
             <div className="space-y-4 pt-4">
               <a
-                href="https://mail.google.com/mail/?view=cm&to=sanjay1116g@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&to=gokulakungumasri@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-secondary-text group hover:text-accent transition-colors min-h-[48px]"
               >
                 <Mail size={20} className="text-accent" />
-                <span>sanjay1116g@gmail.com</span>
+                <span>gokulakungumasri@gmail.com</span>
               </a>
               <div className="flex items-center gap-4 text-secondary-text group hover:text-accent transition-colors">
                 <FaPhone size={20} className="text-accent" />
-                <span>+91 88381 09464</span>
+                <span>+91 6384166446</span>
               </div>
               <div className="flex items-center gap-4 text-secondary-text">
                 <MapPin size={20} className="text-accent" />
-                <span>Coimbatore, Tamil Nadu, India</span>
+                <span>Coimbatore , Tamilnadu - 641008</span>
               </div>
             </div>
 
             <a
-              href="https://mail.google.com/mail/?view=cm&to=sanjay1116g@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&to=gokulakungumasri@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 flex items-center gap-4 text-3xl font-bold hover:text-accent transition-colors group underline decoration-white/10 underline-offset-8 decoration-1 min-h-[44px]"

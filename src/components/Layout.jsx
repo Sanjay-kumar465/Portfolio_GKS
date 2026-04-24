@@ -21,19 +21,19 @@ export const Layout = () => {
   const socialLinks = [
     { 
       icon: FaGithub, 
-      link: "https://github.com/Sanjay-kumar465",
+      link: "https://github.com/kunguma-sri06",
       hoverColor: "hover:text-[#ffffff]",
       glow: "hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
     },
     { 
       icon: FaLinkedin, 
-      link: "https://www.linkedin.com/in/sanjay-senthikumar/",
+      link: "https://www.linkedin.com/in/gokula-kunguma-sri-313643326/",
       hoverColor: "hover:text-[#0077B5]",
       glow: "hover:drop-shadow-[0_0_10px_rgba(0,119,181,0.8)]"
     },
     { 
       icon: FaInstagram, 
-      link: "https://www.instagram.com/sanjay__kumar465/",
+      link: "https://www.instagram.com/_kunguma__sri_/",
       hoverColor: "hover:text-[#E1306C]",
       glow: "hover:drop-shadow-[0_0_10px_rgba(225,48,108,0.8)]"
     }
@@ -81,7 +81,7 @@ export const Layout = () => {
       {/* Navbar */}
       <nav className="fixed top-0 w-full glass z-40 px-8 py-6 flex justify-between items-center transition-all duration-300">
         <Link to="/" className="text-xl font-bold tracking-tighter hover:text-accent transition-colors z-50">
-          SANJAY S.
+          GOKULA KUNGUMA SRI
         </Link>
         
         {/* Desktop Links */}
@@ -166,7 +166,7 @@ export const Layout = () => {
           </div>
           <div className="text-center space-y-2">
             <p className="text-secondary-text text-[10px] uppercase tracking-[0.2em]">
-              © 2026 Sanjay S. Built from scratch.
+              © 2026 GOKULA KUNGUMA SRI. Built from scratch.
             </p>
             <p className="text-accent text-[8px] uppercase tracking-[0.3em] font-mono">
               React + Three.js + Framer Motion
